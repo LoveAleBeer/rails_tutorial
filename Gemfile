@@ -55,3 +55,6 @@ gem 'bootstrap-sass', '2.3.2.0'
 
 # sprocketsを追加
 gem 'sprockets', '2.11.0'
+
+# セキュアパスワードのため、bcryptを追加
+gem 'bcrypt-ruby', '3.1.2'
