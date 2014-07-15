@@ -59,3 +59,10 @@ gem 'sprockets', '2.11.0'
 
 # セキュアパスワードのため、bcryptを追加
 gem 'bcrypt-ruby', '3.1.2'
+
+# ダミーのユーザーを一気に追加
+gem 'faker', '1.1.2'
+
+# ページネーションを追加
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
