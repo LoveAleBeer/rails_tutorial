@@ -10,6 +10,13 @@ module SessionsHelper
   def signed_in?
     !current_user.nil?
   end
+
+  def signed_in_user # users_controllerから移動
+      unless signed_in?
+          store_location
+          redirect_to signin_url, notice: "Please sign in."
+      end
+  end
   
   def sign_out
       self.current_user = nil
@@ -26,7 +33,7 @@ module SessionsHelper
   
   def current_user
       remember_token = User.encrypt(cookies[:remember_token])
-      @current_user ||= User  .find_by(remember_token: remember_token)
+      @current_user ||= User.find_by(remember_token: remember_token)
   end
   
   def redirect_back_or(default)
